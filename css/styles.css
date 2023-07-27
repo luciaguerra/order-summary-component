@@ -8,6 +8,7 @@
     --accent-color: hsl(225, 100%, 98%);
     --font-color: hsl(224, 23%, 55%);
     --tittle-color: hsl(223, 47%, 23%);
+    --active-color: #766CF1;
 }
 
 * {
@@ -17,28 +18,136 @@
 }
 
 body {
-    font-family: 'Red Hat Display', sans-serif;
     text-align: center;
-    color: var(--font-color);
+    
     background-color: var(--background-color);
+    line-height: 1.5;
+}
+
+body, .cancel-order {
+    color: var(--font-color);
+}
+
+body, button {
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+body, main, .plan-section, .anual-plan, .payment-section {
+    display: flex;
+}
+
+body, main, .plan-section, .anual-plan {
+    align-items: center;
+}
+
+body, main, img {
+    width: 100%;
 }
 
 body, main {
-    width: 100%;
     min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+}
+
+body, main {
     justify-content: center;
 }
 
+body, main, .payment-section {
+    flex-direction: column;
+}
+
+h1 {
+    font-size: 1.5rem;
+    margin: 0 0 1rem;
+}
+
+h1, .plan-info p:first-child, .cancel-order:hover {
+    color: var(--tittle-color);
+}
+
+h1, .plan-info p:first-child {
+    font-weight: 900;
+}
+
 img {
-    width: 100%;
     object-fit: cover;
 }
 
+button {
+    border: none;
+    padding: 0.9rem;
+    cursor: pointer;
+}
+
+.background-image {
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+}
+
 .container {
-    width: 30%;
+    width: 29%;
     background-color: white;
-    padding: 3rem;
+    overflow: hidden;
+    border-radius: 1.2rem;
+}
+
+.container, .make-payment {
+    box-shadow: -1px 11px 43px -8px rgba(0, 0, 0, 0.182);
+}
+
+.summary-section {
+    padding: 1.5rem 3rem;
+}
+
+.plan-section, .payment-section {
+    width: 80%;
+}
+
+.plan-section {
+    justify-content: space-between;
+    background-color: var(--accent-color);
+    font-size: 1rem;
+    padding: 1rem;
+    border-radius: 0.6rem;
+    margin: auto;
+}
+
+.plan-info {
+    margin: 0 1rem;
+}
+
+.music-icon {
+    width: 25%;
+}
+
+.change-plan, button {
+    font-weight: 700;
+    font-size: 0.75rem;
+}
+
+.change-plan:hover {
+    color: var(--active-color);
+    text-decoration: none;
+}
+
+.payment-section {
+    border-radius: 0.5rem;
+    margin: auto;
+}
+
+.make-payment {
+    margin: 2rem 0 1rem;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 0.5rem;
+}
+
+.make-payment:hover {
+    background-color: var(--active-color);
+}
+
+.cancel-order {
+    margin: 0 0 1.8rem;
+    background-color: rgba(255, 255, 255, 0);
 }
