@@ -19,7 +19,6 @@
 
 body {
     text-align: center;
-    
     background-color: var(--background-color);
     line-height: 1.5;
 }
@@ -32,11 +31,11 @@ body, button {
     font-family: 'Red Hat Display', sans-serif;
 }
 
-body, main, .plan-section, .anual-plan, .payment-section {
+body, main, .plan-section, .annual-plan, .payment-section {
     display: flex;
 }
 
-body, main, .plan-section, .anual-plan {
+body, main, .plan-section, .annual-plan {
     align-items: center;
 }
 
@@ -123,7 +122,7 @@ button {
 
 .change-plan, button {
     font-weight: 700;
-    font-size: 0.75rem;
+    font-size: 0.85rem;
 }
 
 .change-plan:hover {
@@ -150,4 +149,101 @@ button {
 .cancel-order {
     margin: 0 0 1.8rem;
     background-color: rgba(255, 255, 255, 0);
+}
+
+@media screen and (max-width: 1220px) {
+    .container {
+        width: 35%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .container {
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 820px) {
+    .container {
+        width: 45%;
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .container {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    p, button {
+        font-size: 1rem;
+    }
+
+    .container {
+        width: 85%;
+    }
+
+    .summary-section {
+        padding: 1.3rem 2.85rem;
+    }
+    
+    .change-plan {
+        font-size: 0.85rem;
+    }
+
+    .cancel-order {
+        margin: 0 0 1rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    h1 {
+        margin: 0 0 0.5rem;
+    }
+
+    p, button {
+        font-size: 0.95rem;
+    }
+
+    .summary-section {
+        padding: 1rem 1.5rem;
+    }
+
+    .plan-section, .payment-section {
+        width: 85%;
+    }
+
+    .plan-info {
+        margin: 0 0.5rem;
+    }
+
+    .annual-plan {
+        text-align: start;
+    }
+
+    .make-payment {
+        margin: 1rem 0 0.5rem;
+    }
+
+}
+
+@media screen and (max-width: 300px) {
+    h1 {
+        font-size: 1.4rem;
+    }
+
+    p, button {
+        font-size: 0.8rem;
+    }
+
+    .plan-section {
+        padding: 0.7rem;
+        line-height: 1.2;
+    }
+
+    .change-plan {
+        font-size: 0.7rem;
+    }
+
 }
